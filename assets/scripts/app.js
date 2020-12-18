@@ -2,31 +2,31 @@ const Portfolio = function() {
 	function makeWords() {
 		var words = [
 			{
-				text: "rapping",
+				text: "Data Structure",
 				weight: 12.3
 			}, {
-				text: "css3",
+				text: "Algorithm",
 				weight: 8
 			}, {
-				text: "javascript",
+				text: "Competitive Programming",
 				weight: 14
 			}, {
-				text: "jquery",
+				text: "Cloud Application Development",
 				weight: 3
 			}, {
-				text: "programming",
+				text: "Problem Solving",
 				weight: 7
 			}, {
-				text: "python",
+				text: "Design Patterns with Java",
 				weight: 10
 			}, {
-				text: "java",
+				text: "REST API",
 				weight: 9
 			}, {
-				text: "qazi",
+				text: "Microservice",
 				weight: 15
 			}, {
-				text: "newText",
+				text: "Fintech",
 				weight: 7
 			}
 		];
