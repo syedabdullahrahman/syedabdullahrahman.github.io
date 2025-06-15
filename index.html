@@ -130,6 +130,7 @@
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-KQ1086REG2', {
+      cookie_domain: 'auto',
       page_title: 'Java Developer | Syed Abdullah',
       page_location: 'https://syedabdullahrahman.github.io/',
       content_group1: 'Java Developer',
@@ -139,7 +140,7 @@
   </script>
 
   <!-- Google Search Console Verification -->
-  <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE">
+  <!-- <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE"> -->
 
   <!-- Bing Webmaster Tools -->
   <meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE">
@@ -743,31 +744,37 @@
 <body class="bg-background text-text font-sans">
 
   <!-- ======= Hero Section (Enhanced for SEO) ======= -->
-  <header id="hero" class="h-screen flex items-center bg-gradient-to-br from-blue-100 to-teal-100" role="banner">
-    <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center lg:space-x-12">
+  <header id="hero" class="min-h-screen flex items-center bg-gradient-to-br from-blue-100 to-teal-100" role="banner">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center lg:space-x-12">
+
       <!-- Left Column: Profile Image -->
       <div class="w-full lg:w-1/2 flex justify-center mb-8 lg:mb-0">
         <img src="assets/images/profile.JPG"
           alt="Syed Abdullah - Senior Java Developer and Spring Boot Expert - Professional Profile Photo"
-          class="w-48 h-48 object-cover rounded-full border-4 border-primary shadow-lg" loading="eager"
-          fetchpriority="high" width="192" height="192">
+          class="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 object-cover rounded-full border-4 border-primary shadow-lg"
+          loading="eager" fetchpriority="high" width="192" height="192">
       </div>
+
       <!-- Right Column: Text Content -->
       <div class="w-full lg:w-1/2 text-center lg:text-left">
-        <h1 class="text-5xl lg:text-6xl font-display font-bold text-secondary mb-4">
+        <h1 class="text-3xl sm:text-4xl lg:text-6xl font-display font-bold text-secondary mb-4">
           🥇 <span class="text-javaOrange">Expert Java Developer</span> Available for Hire
         </h1>
-        <h2 class="text-3xl lg:text-4xl font-display font-semibold text-accent mb-4">
+
+        <h2 class="text-xl sm:text-2xl lg:text-4xl font-display font-semibold text-accent mb-4">
           Syed Abdullah - Senior Java Developer
         </h2>
-        <div class="text-xl lg:text-2xl text-secondary mb-6">
+
+        <div class="text-lg sm:text-xl lg:text-2xl text-secondary mb-6">
           <span id="typed-roles" class="font-semibold"></span>
         </div>
+
         <div class="bg-white/90 backdrop-blur-sm rounded-lg p-6 mb-6 shadow-lg border-l-4 border-springGreen">
-          <p class="text-lg text-secondary mb-4">
+          <p class="text-base sm:text-lg text-secondary mb-4">
             ⚡ <strong>AVAILABLE NOW</strong> for Java Development Projects
           </p>
-          <div class="grid grid-cols-2 gap-4 text-sm">
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
             <div class="flex items-center">
               <i class="fas fa-check-circle text-springGreen mr-2"></i>
               <span><strong>5+ Years</strong> Experience</span>
@@ -786,29 +793,33 @@
             </div>
           </div>
         </div>
-        <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mb-6">
+
+        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 mb-6">
           <a href="mailto:syedabdullahrahman@gmail.com?subject=Hire%20Java%20Developer&body=Hello%20Syed,%20I%20am%20interested%20in%20hiring%20you%20for%20Java%20development%20services."
-            class="bg-javaOrange hover:bg-orange-600 text-white px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 font-semibold text-center">
+            class="bg-javaOrange hover:bg-orange-600 text-white px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 font-semibold text-center w-full sm:w-auto">
             💼 Hire Java Developer NOW
           </a>
           <a href="download/Syed_Abdullah_RESUME.pdf"
-            class="bg-primary hover:bg-blue-800 text-white px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 font-semibold text-center">
+            class="bg-primary hover:bg-blue-800 text-white px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 font-semibold text-center w-full sm:w-auto">
             📄 Download Java Developer CV
           </a>
         </div>
-        <div class="flex justify-center lg:justify-start gap-4">
+
+        <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-3 sm:gap-4">
           <a href="#projects"
-            class="border-2 border-primary text-primary px-6 py-3 rounded-lg hover:bg-primary hover:text-white transition-all duration-300">
+            class="border-2 border-primary text-primary px-6 py-3 rounded-lg hover:bg-primary hover:text-white transition-all duration-300 text-center">
             🚀 View Java Projects
           </a>
           <a href="#contact"
-            class="border-2 border-springGreen text-springGreen px-6 py-3 rounded-lg hover:bg-springGreen hover:text-white transition-all duration-300">
+            class="border-2 border-springGreen text-springGreen px-6 py-3 rounded-lg hover:bg-springGreen hover:text-white transition-all duration-300 text-center">
             💬 FREE Consultation
           </a>
         </div>
+
       </div>
     </div>
   </header>
+
 
   <!-- ======= About Section (SEO Enhanced) ======= -->
   <section id="about" class="py-20 bg-white" role="main">
@@ -1909,7 +1920,7 @@
   </button>
 
   <!-- ======= WhatsApp Chat Button ======= -->
-  <a href="https://wa.me/1234567890?text=Hi%20Syed,%20I%20am%20interested%20in%20hiring%20you%20for%20Java%20development%20services."
+  <a href="https://wa.me/8801780056159?text=Hi%20Syed,%20I%20am%20interested%20in%20hiring%20you%20for%20Java%20development%20services."
     target="_blank"
     class="fixed bottom-6 left-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110 z-50"
     aria-label="Chat on WhatsApp">
