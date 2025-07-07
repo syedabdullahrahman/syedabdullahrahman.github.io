@@ -1545,6 +1545,79 @@
     </div>
   </section>
 
+ <!-- ======= Blog section ======= -->
+<section id="blog-articles" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl lg:text-5xl font-display font-bold text-secondary mb-4">
+        📚 Featured Technical Blogs
+      </h2>
+      <p class="text-xl text-secondary mb-8">
+        🧠 Deep-dives into Java, Spring Boot, Security, and System Design topics published on Medium
+      </p>
+    </div>
+
+    <div id="medium-posts" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <!-- Posts will be injected here -->
+    </div>
+  </div>
+</section>
+
+<script>
+(async function () {
+  try {
+    const resp = await fetch(
+      "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@syedabdullahrahman"
+    );
+    const json = await resp.json();
+    const container = document.getElementById("medium-posts");
+
+    
+    json.items.forEach(item => {
+      // Extract first image from post content
+      const imgMatch = item.content.match(/<img[^>]+src=[\\"']([^\\'">]+)[\\"']/i);
+let img = imgMatch && imgMatch[1].startsWith("https://")
+  ? imgMatch[1].split('?')[0]
+  : 'assets/images/default-blog.jpg';
+
+
+      // Clean description text
+      const cleanDescription = item.description.replace(/<[^>]+>/g, '').slice(0, 120);
+
+      // Format publish date
+      const date = new Date(item.pubDate).toLocaleDateString('en-US', {
+        year: 'numeric', month: 'short', day: 'numeric'
+      });
+
+      container.innerHTML += `
+        <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-transform duration-300 transform hover:scale-105 border-t-4 border-javaOrange">
+          <div class="relative">
+            <img src="${img}" alt="${item.title}" class="w-full h-48 object-cover">
+            <div class="absolute top-4 right-4 bg-javaOrange text-white px-3 py-1 rounded-full text-sm font-semibold">
+              Blog
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-display font-bold text-secondary mb-2">${item.title}</h3>
+            <p class="text-sm text-gray-500 mb-3">📅 ${date}</p>
+            <p class="text-secondary mb-4 leading-relaxed">
+              ${cleanDescription}…
+            </p>
+            <a href="${item.link}" target="_blank"
+               class="bg-javaOrange hover:bg-orange-600 text-white px-4 py-3 rounded-lg transition-all font-semibold block text-center">
+               📝 Read on Medium
+            </a>
+          </div>
+        </article>
+      `;
+    });
+  } catch (error) {
+    console.error("Failed to load Medium posts:", error);
+  }
+})();
+</script>
+
+
   <!-- ======= Experience Timeline Section (Enhanced) ======= -->
   <section id="experience" class="py-20 bg-background">
     <div class="container mx-auto px-6">
